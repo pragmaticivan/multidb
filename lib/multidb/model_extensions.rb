@@ -6,7 +6,7 @@ module Multidb
   module Connection
     def establish_connection(spec = nil)
       super(spec)
-      Multidb.init(connection_pool.spec.config)
+      Multidb.init(connection_pool.db_config)
     end
 
     def connection
